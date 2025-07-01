@@ -17,4 +17,3 @@ export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar
 export LOCATION=sce
 # Custom aliases
 alias p='sudo pacman'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

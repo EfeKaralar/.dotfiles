@@ -89,4 +89,3 @@ Using vim-plug for clean, fast plugin management:
 - Auto-sync requires git repositories to be properly configured with remotes
 - Some plugins may require additional setup (see plugin documentation)
 - The configuration is optimized for my specific workflow but can be easily adapted
-
