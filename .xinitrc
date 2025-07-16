@@ -15,8 +15,9 @@ picom -b
 # Set wallpaper
 feh --no-fehbg --bg-fill --randomize ~/Media/Images/Walls/"Current Walls"/*
 # Top bar utility
-export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar
-dwmblocks &
+export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar:~/Apps/suckless/dwmblocks/dwmblocks-alp/scripts/
+# dwmblocks &
+polybar &
 
 # Lock screen utility
 xss-lock -- xsecurelock &
@@ -28,4 +29,5 @@ mailsync &
 xinput set-button-map 14 1 2 3 5 4 6 7
 
 # Launch window manager
-exec dwm
+# exec dwm
+exec awesome
