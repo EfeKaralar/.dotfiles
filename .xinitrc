@@ -17,7 +17,7 @@ feh --no-fehbg --bg-fill --randomize ~/Media/Images/Walls/"Current Walls"/*
 # Top bar utility
 export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar:~/Apps/suckless/dwmblocks/dwmblocks-alp/scripts/
 # dwmblocks &
-polybar &
+# polybar &
 
 # Lock screen utility
 xss-lock -- xsecurelock &
