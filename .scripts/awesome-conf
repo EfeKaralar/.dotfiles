@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# This script loads an Awesome WM config 
+# This script loads back the default Awesome WM config in case something goes wrong.
 #
 
 
@@ -30,6 +30,7 @@ load() {
     fi
 
     echo "Loading the desired Awesome config from $filepath"
+    # Add your Action C code here that works with the file
     scp -vr $file_path ~/.config/awesome
 }
 
