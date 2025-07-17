@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# This script loads an Awesome WM config 
+# This script loads an Awesome WM config
 #
 
 
@@ -21,16 +21,16 @@ current() {
 # Action C with config name input
 load() {
     local config_name="$1"
-    local file_path="~/.config/awesome-${config_name}"
+    local dir_path="~/.config/awesome-${config_name}"
 
     # Check if file exists
-    if [[ ! -f "$file_path" ]]; then
-        echo "Error: File '$file_path' does not exist" >&2
+    if [[ ! -d "$dir_path" ]]; then
+        echo "Error: Directory '$dir_path' does not exist" >&2
         exit 1
     fi
 
     echo "Loading the desired Awesome config from $filepath"
-    scp -vr $file_path ~/.config/awesome
+    scp -vr $dir_path ~/.config/awesome
 }
 
 # Display usage information
