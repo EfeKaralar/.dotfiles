@@ -4,24 +4,22 @@
 # This script loads back the default Awesome WM config in case something goes wrong.
 #
 
-# Safely copy the deafault Awesome config to the Current Awesome config
-scp -vr ~/.config/awesome-backup ~/.config/awesome
 
 
 # Default action
-action_a() {
+default() {
     echo "Loading back default Awesome config from ~/.config/awesome-default (default-action)"
-    # Add your Action A code here
+    scp -vr ~/.config/awesome-backup ~/.config/awesome
 }
 
 # Action B
-action_b() {
+current() {
     echo "Loading the currently worked on Awesome config from ~/.config/awesome-current"
-    # Add your Action B code here
+    scp -vr ~/.config/awesome-current ~/.config/awesome
 }
 
 # Action C with config name input
-action_c() {
+load() {
     local config_name="$1"
     local file_path="~/.config/awesome-${config_name}"
 
@@ -33,6 +31,7 @@ action_c() {
 
     echo "Loading the desired Awesome config from $filepath"
     # Add your Action C code here that works with the file
+    scp -vr $file_path ~/.config/awesome
 }
 
 # Display usage information
@@ -47,20 +46,20 @@ usage() {
 }
 
 # Parse command line arguments
-while getopts "bc:h" opt; do
+while getopts "cl:h" opt; do
     case $opt in
-        b)
-            action_b
+        c)
+            current
             exit 0
             ;;
-        c)
+        l)
             config_name="$OPTARG"
             if [[ -z "$config_name" ]]; then
                 echo "Error: Config name cannot be empty" >&2
                 usage
                 exit 1
             fi
-            action_c "$config_name"
+            load "$config_name"
             exit 0
             ;;
         h)
@@ -81,4 +80,4 @@ while getopts "bc:h" opt; do
 done
 
 # If no flags were provided, perform default action A
-action_a
+default
