@@ -24,13 +24,13 @@ action_b() {
 action_c() {
     local config_name="$1"
     local file_path="~/.config/awesome-${config_name}"
-    
+
     # Check if file exists
     if [[ ! -f "$file_path" ]]; then
         echo "Error: File '$file_path' does not exist" >&2
         exit 1
     fi
-    
+
     echo "Loading the desired Awesome config from $filepath"
     # Add your Action C code here that works with the file
 }
@@ -39,11 +39,11 @@ action_c() {
 usage() {
     echo "Usage: $0 [OPTIONS]"
     echo "Options:"
-    echo "  -b              Perform action B"
-    echo "  -c <config>     Perform action C with specified config name"
-    echo "  -h              Show this help message"
+    echo "  -c              Loading back currently worked on Awesome config from ~/.config/awesome-current"
+    echo "  -l <config>     Loading back default Awesome config from ~/.config/awesome-<config>"
+    echo "  -h              display this message"
     echo ""
-    echo "If no options are provided, action A will be performed by default."
+    echo "If no options are provided, script will load the awesome-default config performed by default."
 }
 
 # Parse command line arguments
