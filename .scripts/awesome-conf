@@ -9,14 +9,14 @@
 # Default action
 default() {
     echo "Loading back default Awesome config from ~/.config/awesome-default (default-action)"
-    rm -rf ~/awesome/*
+    rm -rf ~/.config/awesome/*
     rsync -av --exclude='.git' ~/.config/awesome-default/ ~/.config/awesome
 }
 
 # Action B
 current() {
     echo "Loading the currently worked on Awesome config from ~/.config/awesome-current"
-    rm -rf ~/awesome/*
+    rm -rf ~/.config/awesome/*
     rsync -av --exclude='.git' ~/.config/awesome-current/ ~/.config/awesome
 }
 
@@ -32,7 +32,7 @@ load() {
     fi
 
     echo "Loading the desired Awesome config from $filepath"
-    rm -rf ~/awesome/*
+    rm -rf ~/.config/awesome/*
     rsync -av --exclude='.git' $dir_path ~/.config/awesome
 }
 
