@@ -9,7 +9,7 @@
 # Default action
 default() {
     echo "Loading back default Awesome config from ~/.config/awesome-default (default-action)"
-    srsync -av --exclude='.git' ~/.config/awesome-backup ~/.config/awesome
+    rsync -av --exclude='.git' ~/.config/awesome-backup ~/.config/awesome
 }
 
 # Action B
