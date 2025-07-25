@@ -10,10 +10,10 @@ dunst &
 redshift -P -O 2750 &
 
 # Transparency utility
-picom -b
+picom --backend glx -b
 
 # Set wallpaper
-feh --no-fehbg --bg-fill --randomize ~/Media/Images/Walls/"Current Walls"/*
+# feh --no-fehbg --bg-fill --randomize ~/Media/Images/Walls/"Current Walls"/*
 # Top bar utility
 export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar:~/Apps/suckless/dwmblocks/dwmblocks-alp/scripts/
 # dwmblocks &
@@ -23,11 +23,11 @@ export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar:~/Apps/suckless/dwmb
 xss-lock -- xsecurelock &
 
 # Sync mailbox
-mailsync &
+# mailsync &
 
 # Reverse mouse scrolling
 xinput set-button-map 14 1 2 3 5 4 6 7
 
 # Launch window manager
-# exec dwm
+# exec window manager
 exec awesome
