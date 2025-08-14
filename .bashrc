@@ -15,5 +15,12 @@ export TERMINAL=st
 export EDITOR=vim
 export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar
 export LOCATION=sce
+# Add to ~/.bashrc or ~/.zshrc
+export ANDROID_HOME=/home/alp/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Reload shell
+source ~/.bashrc  # or ~/.zshrc
 # Custom aliases
 alias p='sudo pacman'
