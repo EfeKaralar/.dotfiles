@@ -20,7 +20,5 @@ export ANDROID_HOME=/home/alp/Android/Sdk
 # export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# Reload shell
-source ~/.bashrc  # or ~/.zshrc
 # Custom aliases
 alias p='sudo pacman'
