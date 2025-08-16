@@ -17,8 +17,8 @@ export PATH=$PATH:~/.dotfiles/voidrice/.local/bin/statusbar
 export LOCATION=sce
 # ANDROID THINGS
 export ANDROID_HOME=/home/alp/Android/Sdk
-# export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Custom aliases
 alias p='sudo pacman'
